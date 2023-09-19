@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="x-icon" href="../static/images/icon.png">
+    <link href="../static/css/home.css" rel="stylesheet">
+    <!--link href="{{ url_for('static', filename='css/home.css') }}" rel="stylesheet"-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntelligentS</title>
+    <!--link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous"-->
+</head>
+<body>
+    <header>
+        <ul class="nav_bar">
+            <li class = "l-block"><a class="first_list" href="http://127.0.0.1:5000/home">Home</a></li>
+            <li class = "l-block"><a class="first_list" href="http://127.0.0.1:5000/info">Info</a></li>
+            <li class = "l-block"><a class="first_list" href="http://127.0.0.1:5000/discover">Discover</a></li>
+        </ul>
+    </header>
+
+    <div>
+        <!--img src="../static/images/bgimagepage1.jpg" alt="" height="900px" width="1600px"/-->
+        <!-- Asta am scris ca sa comunic cu requestul/serverul
+        <style>
+            .my-custom-row {
+                background-color: bisque;
+                height: 400px;
+            }
+            .stateRed{
+                background-color: red;
+            }
+            .stateGreen{
+                background-color: green;
+            }
+        </style>
+
+        <div class="container" id="names">
+            <div class="row my-custom-row justify-content-center align-items-center">
+                {% set s1, s2 = "None", "None" %}
+                {% if names.0 == "Green" %}
+                {% set s1, s2 = "stateGreen", "stateRed" %}
+                {% else %}
+                {% set s1, s2 = "stateRed", "stateGreen" %}
+                {% endif %}
+                <div class="col-sm-4"><div class={{s1}}>{{ names.0 }}</div></div>
+                <div class="col-sm-4"><div class={{s2}}>{{ names.1 }}</div></div>
+            </div>
+
+        </div>
+        -->
+
+        <div >
+            <!--h1>Hello, my name is Kevin.</h1-->
+            <p class="subtitle1">What should you know about us? </p>
+            <p class="subtitle2">Here is some information... </p>
+
+            <div>
+                <!--<img src="static/images/intersectie.jpg" alt="" height="720px" width="480px"/> -->
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.first_list {
+    text-decoration: none;
+    min-width: 100px;
+    line-height: 50px;
+    color: #B37E49;
+    font-size: 1.5em;
+    transition: all 500ms;
+}
+.first_list:hover{
+    color: #B37E49;
+    min-width: 100px;
+    font-size:27px;
+    font-size-adjust: 20px;
+}
+.l-block{
+    list-style: none;
+    min-width: 160px;
+    float: left;
+    }
+.nav_bar{
+    background-color: #131a20;
+    height: 50px;
+    text-indent: 80px;
+    text-shadow: 1px 1px 2px pink;
+}
+body{
+    box-sizing: border-box;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/intersections.png");
+    background-size: cover;
+    font-family: montserrat;
+}
+
+
+/*****************************************************/
+
+:root {
+  --bg-color: hsl(49 37% 94%);
+  --typewriterSpeed: 1s;
+  --typewriterCharacters: 1;
+}
+/*
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  background: var(--bg-color);
+}
+*/
+/*
+face sa apara textul ca si cum ai tasta
+h1 {
+  font-size: clamp(1rem, 3vw + 1rem, 4rem);
+  position: relative;
+  font-family: "Source Code Pro", monospace;
+  position: relative;
+  width: max-content;
+}
+
+h1::before,
+h1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+h1::before {
+  background: var(--bg-color);
+  animation: typewriter var(--typewriterSpeed)
+    steps(var(--typewriterCharacters)) 1s forwards;
+}
+
+h1::after {
+  width: 0.125em;
+  background: black;
+  animation: typewriter var(--typewriterSpeed)
+      steps(var(--typewriterCharacters)) 1s forwards,
+    blink 750ms steps(var(--typewriterCharacters)) infinite;
+}
+*/
+
+.text1{
+    position: absolute;
+    padding-left: 12rem;
+    padding-top: 7rem;
+}
+
+.subtitle1 {
+    color: #533273;
+    backdrop-filter: blur(10px) saturate(80%);
+    font-size: 2rem;
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease 0.5s forwards;
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.subtitle2 {
+    color: #8787da;
+    font-size: 2rem;
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease 3s forwards;
+    text-align: center;
+    margin: 0;
+    height: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+/*
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+*/
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.intersections{
+    padding-top: 100px;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+button{
+    font-family: Arial;
+    background-color: #202030;
+    color: #dddddd;
+    min-width: 150px;
+    border:none;
+    border-radius:0px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size:20px;
+    cursor:pointer;
+}
+
+button:hover{
+  background-color: #404063;
+}
+
+.dropdown-options {
+    font-size: 17px;
+    display: none;
+    position: absolute;
+    overflow: auto;
+    left: 100%;
+    margin-top: 0;
+    top: 0;
+    background-color:#202030;
+    border-radius:0px;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+
+.dropdown:hover .dropdown-options {
+    display: block;
+}
+
+.dropdown-options a {
+    display: block;
+    color: #ffff;
+    padding: 5px;
+    text-decoration: none;
+    padding:20px 40px;
+
+}
+
+.dropdown-options a:hover {
+    color: #0a0a23;
+    background-color: #404063;
+    border-radius:0px;
+}
+
+.sidebar{
+    box-sizing: border-box;
+    position: fixed;
+    top: 10%;
+    left: 0;
+    background: #dddddd;
+    height: 50%;
+    width: 11%;
+}

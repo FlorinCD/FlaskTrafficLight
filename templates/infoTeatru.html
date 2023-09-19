@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>IntelligentS</title>
+    <link rel="shortcut icon" type="x-icon" href="../static/images/icon.png">
+    <link href="../static/css/infoTeatru.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function (){
+            setInterval(
+                function(){
+                    //$("#auto-reload-s1").load(location.href + " #auto-reload-s1");
+                    //$("#auto-reload-s2").load(location.href + " #auto-reload-s2");
+                    $("#auto-reload-sem-1").load(location.href + " #auto-reload-sem-1");
+                    $("#auto-reload-sem-2").load(location.href + " #auto-reload-sem-2");
+                    $("#car_count").load(location.href + " #car_count");
+        },2000)});
+    </script>
+</head>
+<body>
+    <header>
+        <ul class="nav_bar">
+            <li class = "l-block"><a class="first_list" href="http://127.0.0.1:5000/home">Home</a></li>
+            <li class = "l-block"><a class="first_list" href="http://127.0.0.1:5000/info">Info</a></li>
+            <li class = "l-block"><a class="first_list" href="http://127.0.0.1:5000/discover">Discover</a></li>
+        </ul>
+    </header>
+    <div>
+        <p class="text1">This image shows the state of the traffic light in real time.</p>
+    </div>
+    <div>
+        <div class="semaphores_1">
+            <ul class="sem_list_1">
+                <li class="semaphore" id="semaphore1">Semaphore 1</li>
+                <li class="semaphore" id="semaphore2">Semaphore 2</li>
+            </ul>
+            <ul id="auto-reload-sem-1">
+                <div class="semf1">
+                    <div class="li_1">
+                        <!-- doar pentru verde si rosu fara galben deocamdata -->
+                        {% set s1, s2, s3 = "None", "None", "None" %}
+                        {% if names.0 == "Green" %}
+                        {% set s1, s2, s3 = "rON", "yOFF", "gOFF" %}
+                        {% else %}
+                        {% set s1, s2, s3 = "rOFF", "yOFF", "gON" %}
+                        {% endif %}
+                        <li class={{ s1 }}></li>
+                        <li class={{ s2 }}></li>
+                        <li class={{ s3 }}></li>
+                    </div>
+                </div>
+                <div class="semf2">
+                    <div class="li_1">
+                        <!-- doar pentru verde si rosu fara galben deocamdata -->
+                        {% set s1, s2, s3 = "None", "None", "None" %}
+                        {% if names.0 == "Green" %}
+                        {% set s1, s2, s3 = "rOFF", "yOFF", "gON" %}
+                        {% else %}
+                        {% set s1, s2, s3 = "rON", "yOFF", "gOFF" %}
+                        {% endif %}
+                        <li class={{ s1 }}></li>
+                        <li class={{ s2 }}></li>
+                        <li class={{ s3 }}></li>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <div class="semaphores_2">
+            <ul class="sem_list_2">
+                <li class="semaphore" id="semaphore3">Semaphore 3</li>
+                <li class="semaphore" id="semaphore4">Semaphore 4</li>
+            </ul>
+        <!---------------->
+            <ul id="auto-reload-sem-2">
+                <div class="semf3">
+                    <div class="li_2">
+                        <!-- doar pentru verde si rosu fara galben deocamdata -->
+                        {% set s1, s2, s3 = "None", "None", "None" %}
+                        {% if names.1 == "Green" %}
+                        {% set s1, s2, s3 = "rON", "yOFF", "gOFF" %}
+                        {% else %}
+                        {% set s1, s2, s3 = "rOFF", "yOFF", "gON" %}
+                        {% endif %}
+                        <li class={{ s1 }}></li>
+                        <li class={{ s2 }}></li>
+                        <li class={{ s3 }}></li>
+                    </div>
+                </div>
+                <div class="semf4">
+                    <div class="li_2">
+                        <!-- doar pentru verde si rosu fara galben deocamdata -->
+                        {% set s1, s2, s3 = "None", "None", "None" %}
+                        {% if names.1 == "Green" %}
+                        {% set s1, s2, s3 = "rOFF", "yOFF", "gON" %}
+                        {% else %}
+                        {% set s1, s2, s3 = "rON", "yOFF", "gOFF" %}
+                        {% endif %}
+                        <li class={{ s1 }}></li>
+                        <li class={{ s2 }}></li>
+                        <li class={{ s3 }}></li>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <div class="map" id="map"></div>
+    </div>
+    <div class="car_count">
+        <h3 class="simple_text">Number of cars which have passed today<p id="car_count">: {{ names.2 }}</p></h3> <!-- count == varbiable in jinja -->
+    </div>
+    <script src="../static/code/infoTeatru.js"></script>
+
+
+</body>
+</html>

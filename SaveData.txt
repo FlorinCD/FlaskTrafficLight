@@ -1,0 +1,4 @@
+{'s1': 'Red', 's2': 'Green'}
+{'s1': 'Green', 's2': 'Red'}
+{'s1': 'Red', 's2': 'Green'}
+{'s1': 'Green', 's2': 'Red'}
